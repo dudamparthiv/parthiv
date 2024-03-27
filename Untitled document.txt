@@ -1,0 +1,45 @@
+Radio
+        Attributes
+            Antenna
+            Speakers
+            tape recorder
+            Buttons
+        
+        Behaviours
+            Sound
+            Volume
+
+Theatre 
+        Attributes
+            Theatre name
+            Theatre Address
+            Screen
+            Speakers
+        
+        Behaviours
+            Picture on screen
+            Sound
+
+Bank
+        Attributes
+            Bank name
+            Bank Branch
+            Bank Address
+            Accounts
+            Account amount
+        
+        Behaviours
+            Amount Transactions process
+            Account open process
+            Account close process
+
+Universitys
+        Attributes
+            University name
+            University code 
+            University Address
+            Admissions
+        
+        Behaviours
+            Admission process
+            Courses
