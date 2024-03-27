@@ -19,6 +19,7 @@ Theatre
         Behaviours
             Picture on screen
             Sound
+            vibration
 
 Bank
         Attributes
@@ -32,6 +33,7 @@ Bank
             Amount Transactions process
             Account open process
             Account close process
+            pay                
 
 Universitys
         Attributes
@@ -42,4 +44,5 @@ Universitys
         
         Behaviours
             Admission process
-            Courses
+            Course
+            study
