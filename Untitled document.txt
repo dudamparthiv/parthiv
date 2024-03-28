@@ -4,22 +4,28 @@ Radio
             Speakers
             tape recorder
             Buttons
+            Frequency
         
         Behaviours
-            Sound
-            Volume
+            Tune
+            Adjust Volume
+            Turn On
+            Turn Off
 
 Theatre 
         Attributes
             Theatre name
             Theatre Address
+            Capacity
             Screen
             Speakers
+            Ticket Price
         
         Behaviours
             Picture on screen
-            Sound
-            vibration
+            Open
+            Close
+            Sell Tickets
 
 Bank
         Attributes
