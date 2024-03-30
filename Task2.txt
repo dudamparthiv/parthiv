@@ -1,0 +1,52 @@
+Question 1:
+
+In the java programming language, all source code is first written in plain text files ending with the .java extension.
+Those source files are then compiled into .class file by the jdk javac compiler 
+
+In C language the GNU compliler compiled into .obj,.bak,.exe and in C++ compiled into .obj,.exe
+In java the javac compiler compiled into .class file
+
+The .class file contains bytecodes which is only understand by java virtual machine(jvm)
+
+jre with jvm interpret the bytecode and run the java application
+
+Inside Jvm Architecture
+
+    class loader:
+        class loader load the .class file into jvm memory
+    bytecode verifier:
+        bytecode verifer the .class file is valide or not
+    JIT/AOT:
+        These are used to increase the execution speed
+    Security Manager:
+        These manages the security of the .class file
+
+Question 2:
+
+Java SE
+    Java SE is Standard Edition provides fundamental components of java applications, including the JVM,JRE and JDK.Used for simple application and basic business logic.
+
+Java EE
+    Java EE is Enterprise Edition Bulid upon Java SE,offering Additional APIs for larger,scalable applications.Used for Wed-related tasks,messaging,security and more.
+
+Java ME
+    Java ME is Micro Edition Desigined for embedded and mobile devices with resource constraints. Includes specific APIs for sensors,Bluetooth, and location services.
+
+why it is named as Jdk,J2SE,Java SE
+
+JDK(Java Development Kit)
+    The JDK is the toolkit provided by Sun Microsystems for building Java applications.
+    It includes essential tools like the Java compiler, debugger, and runtime environment.
+    The name "JDK" emphasizes its role in developing java applications
+
+J2SE(Java 2 Platform,Standard Edition)
+    Initially, java was released as Java 1.0, When version 1.2 arrived, it brought siginificant enhancements
+    To distinguish this major upgrade from the original java 1.0, Sun Microsystems rebranded it as Java 2.
+    The "2" in J2SE signified this leap in features.
+    The "SE" stands for Standard Edition
+
+Java SE(Java Standard Edition)
+    In 2004, Sun Microsystems simplified the naming scheme.
+    They dropped the "2" from J2SE and renamed it to Java SE.
+    This change aimed to avoid confusion.
+

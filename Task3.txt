@@ -1,0 +1,42 @@
+    class Task{
+        public static void main(String args[]){
+            System.out.println("Hello World");
+        }
+    }
+    //output: Hello World
+
+//without args
+
+    class Task{
+        public static void main(){
+            System.out.println("Hello World");
+        }
+    }
+
+    output:
+    Error: Main method not found in class Task, please define the main method as:
+      public static void main(String[] args)
+    or a JavaFX application class must extend javafx.application.Application    
+
+//static public void main
+
+    class Task{
+        static public void main(String args[]){
+            System.out.println("Hello World");
+        }
+    }
+    output: Hello World
+
+//public static main
+
+    class Task{
+        public static main(String args[]){
+            System.out.println("Hello World");
+        }
+    }
+
+    error:
+    Task.java:32: error: invalid method declaration; return type required
+        public static main(String args[]){
+                      ^
+    1 error
