@@ -1,0 +1,249 @@
+Task1 : (Nested if)
+
+    class NestedIf{
+        public static void main(String args[]){
+            int a = 10 , b = 20 ;
+            if( a == 10){
+                if(b == 30){
+                    System.out.println("a = " + a);
+                    System.out.println("a = " + a);   
+                }
+                else{
+                    System.out.println("a = " + a);
+                }
+            }
+            else{
+                System.out.println("b = " + b);   
+            }
+        }
+    }
+    // Output :
+        // a = 10
+
+Task2 : (When for loop becomes infinite)
+
+    In Java, a for loop becomes infinite when its condition always evaluates to true.
+
+    1.By providing true as the condition in the for loop, we ensure that the loop runs indefinitely.
+        
+        class ForLoop{
+            public static void main(String args[]){
+                for(;true;){
+                    System.out.println("hello");
+                }
+            }
+        }
+        // Output :
+            // hello
+            // hello
+            // hello
+            // .
+            // .
+            // .
+
+    2.Instead of true, we can use a condition that always evaluates to true, such as 1 == 1 or 0 == 0
+        
+        class ForLoop{
+            public static void main(String args[]){
+                for(;1 == 1;){
+                    System.out.println("hello");
+                }
+            }
+        }
+        // Output :
+            // hello
+            // hello
+            // hello
+            // .
+            // .
+            // .
+
+    3.If you forget to update the variables participating in the condition,you might end up with an infinite loop.
+
+        class ForLoop{
+            public static void main(String args[]){
+                for(int i = 10;i > 0;){
+                    System.out.println("hello");
+                }
+            }
+        }
+        // Output :
+            // hello
+            // hello
+            // hello
+            // .
+            // .
+            // .
+
+Task3 : (Finding Prime Numbers upto n. n is an integer)
+
+    class Prime{
+        public static void main(String args[]){
+            int n = 100;
+            System.out.print("Prime numbers within 1 and " + n + " are: ");
+            for (int i = 2; i <= n; ++i) {
+                boolean isPrime = true;
+                for (int j=2; j < i; ++j){
+                    if ( i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    System.out.print(i + " ");
+                }
+            }
+        }
+    }
+    // Output
+        // Prime numbers within 1 and 100 are: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+Task4 : (Problem: Unique Substrings Counter)
+
+        import java.util.HashSet;
+        import java.util.Set;
+        
+        class UniqueSubstringCounter {
+            public static int countUniqueSubstrings(String s) {
+                Set<String> result = new HashSet<>();
+                int n = s.length();
+        
+                // Generate all substrings
+                for (int i = 0; i < n; i++) {
+                    for (int j = i + 1; j <= n; j++){
+                        result.add(s.substring(i, j));
+                    }
+                }
+                return result.size();
+            }
+            public static void main(String args[]) {
+                String input = "abcabc";
+                int uniqueSubstringCount = countUniqueSubstrings(input);
+                System.out.println("Total count of unique substrings: " + uniqueSubstringCount);
+            }
+        }
+        // Output : 
+            // Total count of unique substrings: 15
+
+Task5 : (for loop)
+
+    // int i=90;
+    // for(;i>100;i++){}
+    
+        class ForLoop{
+            public static void main(String args[]){
+                int i=90;
+                for(;i>100;i++){
+                    System.out.println(i);
+                }
+            }
+        }
+
+        // Program executed but nothing printed
+        // because i = 90 which in for loop i > 100 is false
+
+    // int i=90;
+    // for(;i>100;i--){}
+        
+        class ForLoop{
+            public static void main(String args[]){
+                int i=90;
+                for(;i>100;i--){
+                    System.out.println(i);
+                }
+            }
+        }
+        // Program executed but nothing printed   
+        // because i = 90 which in for loop i > 100 is false
+
+    // int i=90;
+    // for(; ;i++){}
+
+        class ForLoop{
+            public static void main(String args[]){
+                int i=90;
+                for(;;i++){
+                    System.out.println(i);
+                }
+            }
+        }
+        // Output : 
+            // 90
+            // 91
+            // 92
+            // .
+            // .
+            // .
+
+    // int i=90;
+    // for(;i<100;i++){}
+
+        class ForLoop{
+            public static void main(String args[]){
+                int i=90;
+                for(;i<100;i++){
+                    System.out.println(i);
+                }
+            }
+        }
+        // Output :
+            // 90
+            // 91
+            // 92
+            // 93
+            // 94
+            // 95
+            // 96
+            // 97
+            // 98
+            // 99
+
+    // int i=90;
+    // for(;i<100;i+=2){}
+    
+        class ForLoop{
+            public static void main(String args[]){
+                int i=90;
+                for(;i<100;i+=2){
+                    System.out.println(i);
+                }
+            }
+        }
+        // Output :
+            // 90
+            // 92
+            // 94
+            // 96
+            // 98
+
+Task6 : (sum of any digit number)
+
+    int i=23 ==> 2+3=>5 int i=33 ==> 3+3=>6
+    int i=56 ==>11 => 1+1=> 2
+    int 456 ==>4+5=> 9+6=> 15 => 1+5=> 6
+    int 1245 => 1+2=>3+4=>7+5=>12=>1+2=>3
+
+    class Sum{
+        public static void main(String args[]){
+            //int i = 23;
+            //int i = 33;
+            //int i = 56;
+            //int i = 456;
+            int i = 1245;
+            int sum;
+            for(sum = 0;i > 0 || sum >9;i /= 10){
+                if(i == 0){
+                    i=sum;
+                    sum=0;
+                }
+                sum += i % 10;
+            }
+            System.out.println("sum = " + sum);   
+        }
+    }
+    // Output :
+        // sum = 5   //for i = 23
+        // sum = 6   //for i = 33
+        // sum = 2   //for i = 56
+        // sum = 6   //for i = 456
+        // sum = 3   //for i = 1245
