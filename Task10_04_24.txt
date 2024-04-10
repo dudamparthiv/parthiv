@@ -1,6 +1,6 @@
 Task1 : what if my child class has lesser access modifier private void walk()
 
-	// It gives an error  walk() has private access  cannot override walk() in Primitives private void walk()
+	// It gives an error The method walk() from the type Human is not visible
 
 	// Primitives.java
 
@@ -25,22 +25,19 @@ Task1 : what if my child class has lesser access modifier private void walk()
 
 	// TestInheritance.java
 		
-		public class Human extends Primitives {
-			//overriding
-			private void walk(){
-				System.out.println("I am walking");
+		public class TestInheritance {
+
+			public static void main(String[] args) {
+		
+				Human h1 = new Human();
+				h1.walk();
 			}
 		}
+
 	// error :
  
-		walk() has private access in Human
-                human1.walk();
-                      ^
-	.\Human.java:4: error: walk() in Human cannot override walk() in Primitives
-        	private void walk(){
-                	     ^
-  	attempting to assign weaker access privileges; was public
-	2 errors
+	Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+		The method walk() from the type Human is not visible
 
 Task2 : Calc, scientific calc, programmer calc - implement complete inheritance(overriding,uniq methd...)
 
