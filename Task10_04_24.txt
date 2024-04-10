@@ -1,0 +1,186 @@
+Task1 : what if my child class has lesser access modifier private void walk()
+
+	// It gives an error The method walk() from the type Human is not visible
+
+	// Primitives.java
+
+		public class Primitives {
+			public void eat(){
+				System.out.println("eating");
+			}
+			public void walk(){
+				System.out.println("walking");
+			}
+
+		}
+
+	// Human.java
+		
+		public class Human extends Primitives {
+			//overriding
+			private void walk(){
+				System.out.println("I am walking");
+			}
+		}
+
+	// TestInheritance.java
+		
+		public class TestInheritance {
+
+			public static void main(String[] args) {
+		
+				Human h1 = new Human();
+				h1.walk();
+			}
+		}
+
+	// error :
+ 
+	Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+		The method walk() from the type Human is not visible
+
+Task2 : Calc, scientific calc, programmer calc - implement complete inheritance(overriding,uniq methd...)
+
+	StandardCalc
+
+		addition()
+		multiply()
+		substraction()
+		division()
+
+	ScientificCalc extands StandardCalc
+
+		//Unique code
+		trigonometry()
+		functions()
+
+	ProgrammerCalc extands StandardCalc
+
+		//Unique code
+		hex()
+		dec()
+		oct()
+		bin()
+		bitwise()
+		bitShift()
+
+Task3 :  Radio, Tv, Dvd Player - identify the Apt parent class and implement inheritance
+
+	ElectronicDevice
+		
+		turnoff()
+		turnon()
+		audio()
+
+	Radio extands ElectronicDevice
+		
+		//Unique code
+		tunetofrequency()
+
+	Tv extands ElectronicDevice
+		
+		//Unique code
+		changeChannel()
+		record()
+
+	DVDPlayer extands ElectronicDevice
+
+		//Unique code
+		playDVD()
+		insertDisk()
+
+Task4 : Admin, Manager, Finance - idetify the parent class and implement inheritance
+
+	Employee
+
+		empName()
+		empId()
+		login()
+		logout()
+
+	Admin extands Department
+		
+		//Unique Code
+		adminDetails()
+	
+	Manager extands Employee
+
+		//Unique Code
+		managerDetails()
+		employeeManagement()
+
+	Finance extands Employee()
+
+		//Unique Code
+		AccountInfo()
+		Salary()
+
+Task5 :
+
+	class A{
+		public void hello(){
+			System.out.println("hello");
+		}
+	}
+
+	class B extends A{
+	
+		public void call(){
+	 	super.hello();
+		}
+	}
+
+	public class TestInheritance1 {
+
+		public static void main(String[] args) {
+		
+			B obj = new B();
+		
+			obj.hello();
+		}
+	}
+	// Output :
+		// hello
+
+Task6 : if i create 5 obj of Admin and manager in main methods class
+	it has to say 10 objects of employee created - once it shud be printing
+
+		class Employee{
+			static int id = 0;
+			public Employee() {
+			}	
+		}
+
+		class Admin extends Employee{
+			public Admin() {
+				this.id = id + 1;
+			}	
+		}
+
+		class Manager extends Employee{
+			public Manager() {
+				this.id = id + 1;
+			}
+		}
+
+		public class TestInheritance2 {
+
+			public static void main(String[] args) {
+		
+				Admin adm1 = new Admin();
+				Admin adm2 = new Admin();
+				Admin adm3 = new Admin();
+				Admin adm4 = new Admin();
+				Admin adm5 = new Admin();
+		
+				Manager man1 = new Manager();
+				Manager man2 = new Manager();
+				Manager man3 = new Manager();
+				Manager man4 = new Manager();
+				Manager man5 = new Manager();
+		
+				System.out.println(Employee.id);
+			}
+		}
+		// Output : 
+			// 10
